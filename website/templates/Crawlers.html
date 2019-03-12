@@ -1,0 +1,65 @@
+
+{%extends 'base.html'%}
+
+
+{%block content1%}
+
+<div class="container">
+  <div id="container" class="clearfix">
+
+    <div class="element clearfix col1-3 home">
+      <div class="images"><img src="/static/images/crawlers/lofterh1.jpg" width="300" height="156" alt="" /></div>
+      <div class="white-bottom">
+        <h2>Lofter.com</h2>
+        <p>LOFTER汇聚了数百万的摄影、胶片玩家，绘画及动漫爱好者，并不断衍生出更多的兴趣圈子，无论是设计、
+艺术、科技、时尚、旅行、读书、电影评论都有精彩的人与内容不断产出。</p>
+      </div>
+    </div>
+
+    <div class="element  clearfix col2-3 home">
+      <div class="col1-3 connect">
+        <div class="images"><img src="/static/images/crawlers/lofterh2.jpg" width="320" height="402" alt="" /></div>
+      </div>
+      <div class="col1-3 white-right2">
+        <h2>Lofter 爬虫(1)</h2>
+        <h4>需要什么?</h4>
+
+        <p> 已经拥有234套风格各异的个人主页模板，而且这些模板可以轻松的完成自定义样式及导航，
+让你的个人主页变得与众不同，提供了10套移动端浏览器适配模板，当使用手机浏览器访问主页时，也如此优雅。</p>
+        <p class="small bottom"><a href="#filter=.contact">开始</a></p>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+{%for article in article_list%}
+  <div class="element clearfix col1-3 home">
+    
+    <div class="images"><img src="/static/images/pics/{{article.image}}" width="300" height="156" alt="" /></div>
+      <div class="white-bottom">
+        <h2>Lofter.com</h2>
+        <p>LOFTER汇聚了数百万的摄影、胶片玩家，绘画及动漫爱好者，并不断衍生出更多的兴趣圈子，无论是设计、艺术、科技、时尚、旅行、读书、电影评论都有精彩的人与内容不断产出。</p>
+      </div>
+    </div>
+
+    <div class="element  clearfix col2-3 home">
+      <div class="col1-3 connect">
+        <div class="images"><img src="/static/images/crawlers/lofterh2.jpg" width="320" height="402" alt="" /></div>
+      </div>
+      <div class="col1-3 white-right2">
+        <div>
+        {{article.content|safe}}
+        <div>
+        <p class="small bottom"><a href="#filter=.contact">开始</a></p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  
+  </div>
+
+{%endfor%}
+
+  </div>
+</div>
+{%endblock%}
+
+

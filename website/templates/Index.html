@@ -1,0 +1,55 @@
+
+{%extends 'base.html'%}
+
+
+{%block content1%}
+
+<div class="container">
+  <div id="container" class="clearfix">
+    <div class="element  clearfix col1-1 home">
+      <div class="col2-3">
+        <div class="flexslider">
+          <div class="images">
+            <ul class="slides">
+              {%for pics in pics_list%}
+                <li><img src="/static/images/pics/640x402/{{pics.name}}" width="640" height="402" alt="" /></li>
+              {%endfor%}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col1-3 white-right">
+        <h2>Pictures Crawlers</h2>
+        <p>工具:</p>
+        <p>Python 3.4</p>
+        <p>BeautifulSoup</p>
+        <p>PIL</p>
+        <p>urllib </p>
+        <p class="small bottom"><a href="#filter=.blog">Visit my blog <span class="arrow">→</span></a></p>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    {%for pre300 in pre300_list%}
+    <div class="element  clearfix col1-3 home poland all overflow"> <a href="/static/images/pics/300x402/{{pre300.name}}" title="" rel="group">
+      <div class="images"><img src="/static/images/pics/300x402/{{pre300.name}}" alt="" />
+        <div class="title">
+          <div class="title-wrap">
+            <h3> <span>Test</span></h3>
+          </div>
+        </div>
+        <div class="subtitle">
+          <div class="subtitle-wrap">
+            <p> <span>Poland, 2012</span> </p>
+          </div>
+        </div>
+      </div>
+      </a>
+    </div>
+    {%endfor%}
+
+ </div>
+</div>
+{%endblock%}
+
+
